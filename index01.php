@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <p></p>
+    <p>そらの編集部分</p>
 </body>
 
 </html>
