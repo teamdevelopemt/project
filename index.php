@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- ダレさん -->
+    <!-- ダレさん（左側に今回は設置） -->
     <header>
 
     </header>
@@ -27,7 +27,33 @@
     </main>
     <!-- そら -->
     <footer>
-        <div class="contact"></div>
+        <div class="contact">
+            <h4 class="">体験予約</h4>
+            <form action="contact01.php" method="POST">
+                <dl>
+                    <dt>name</dt>
+                    <dd>
+                        <input name="name" type="text" required="required" id="name">
+                    </dd>
+                    <dt>email</dt>
+                    <dd>
+                        <input name="email" type="email" required="required" id="email">
+                    </dd>
+                    <dt>お問い合わせ内容</dt>
+                    <dd>
+                        <textarea name="content" required="required" id="content"></textarea>
+                    </dd>
+                    <div>
+                        <button>submit</button>
+                    </div>
+                </dl>
+
+            </form>
+            <h4 class="">入会申込み</h4>
+            <form action="contact02.php">
+
+            </form>
+        </div>
         <div class="office"></div>
     </footer>
     <!-- 内藤さん -->
