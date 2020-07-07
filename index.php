@@ -43,10 +43,12 @@
                     <dd>
                         <textarea name="content" required="required" id="content"></textarea>
                     </dd>
-                    <div>
-                        <button>submit</button>
-                    </div>
+                    <input type="hidden" id="token" name="token" value="1234567" />
                 </dl>
+                <div>
+                    <button>submit</button>
+                </div>
+
 
             </form>
             <h4 class="">入会申込み</h4>

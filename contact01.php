@@ -1,26 +1,26 @@
 <?php
 //まず01から完成させる
 //todo
-//DBにお問い合わせデータ登録
-//メールを内藤さん、ダレさん、そらさんに届くように設定
+//①DBにお問い合わせデータ登録
+//②メールを内藤さん、ダレさん、そらさんに届くように設定
 
-// 送信確認
-// var_dump($_POST);
-// exit();
+//送信確認
+//var_dump($_POST);
+//exit();
 
 include('functions.php');
-// ここでDB接続処理を実行する
+//DB接続処理を実行
 $pdo = connect_to_db();
 
-// 項目入力のチェック
-// 値が存在しないor空で送信されてきた場合はNGにする
+//項目入力のチェック
+
 if (
     !isset($_POST['name']) || $_POST['name'] == '' ||
     !isset($_POST['email']) || $_POST['email'] ==
     '' ||
     !isset($_POST['content']) || $_POST['content'] == ''
 ) {
-    // 項目が入力されていない場合はここでエラーを出力し，以降の処理を中止する
+    //項目が入力されていない場合はエラーを出力
     echo json_encode(["error_msg" => "no input"]);
     exit();
 }
@@ -31,7 +31,6 @@ $email = $_POST['email'];
 $content = $_POST['content'];
 
 // データ登録SQL作成
-// `created_at`と`updated_at`には実行時の`sysdate()`関数を用いて実行時の日時を入力する
 $sql = 'INSERT INTO contact(id, name, email, content, created_at) VALUES(NULL, :name, :email, :content, sysdate())';
 
 // SQL準備&実行
@@ -41,24 +40,8 @@ $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $status = $stmt->execute();
 
-// データ登録処理後
-if ($status == false) {
-    // SQL実行に失敗した場合はここでエラーを出力し，以降の処理を中止する
-    $error = $stmt->errorInfo();
-    echo json_encode(["error_msg" => "{$error[2]}"]);
-    exit();
-} else {
-    //・・入力ページファイルに移動
-    header("Location:index.php");
-    exit();
-}
-
-
-
-
-
-
-
+//メール送信処理
+$request_param = $_POST;
 
 $request_datetime = date("Y年m月d日 H時i分s秒");
 
@@ -97,7 +80,7 @@ if ($request_param['token'] === '1234567') {
         mb_send_mail($mailto, $subject, $content, $mailfrom);
 ?>
         <script>
-            window.location = "thanks.php";
+            window.location = "index.php";
         </script>
 <?php
     } else {
