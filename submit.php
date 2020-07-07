@@ -4,31 +4,38 @@
 //①DBにお問い合わせデータ登録
 //②メールを内藤さん、ダレさん、そらさんに届くように設定
 
+session_start();
 //送信確認
-//var_dump($_POST);
-//exit();
+var_dump($_SESSION);
+exit();
 
 include('functions.php');
 //DB接続処理を実行
 $pdo = connect_to_db();
 
-//項目入力のチェック
 
-if (
-    !isset($_POST['name']) || $_POST['name'] == '' ||
-    !isset($_POST['email']) || $_POST['email'] ==
-    '' ||
-    !isset($_POST['content']) || $_POST['content'] == ''
-) {
-    //項目が入力されていない場合はエラーを出力
-    echo json_encode(["error_msg" => "no input"]);
-    exit();
-}
+// // 受け取ったデータを変数に入れる
+// $name = $_POST['name'];
+// $kana = $_POST['kana'];
+// $child_name = $_POST['child_name'];
+// $child_kana = $_POST['child_kana'];
+// $organization = $_POST['organization'];
+// // $grade = $_POST['grade'];
+// $reason = $_POST['reason'];
+// $email = $_POST['email'];
+// $email_cf = $_POST['email_cf'];
+// $email_cf = $_POST['phone'];
+// $contact = $_POST['contact'];
+// $date01 = $_POST['date01'];
+// $date02 = $_POST['date02'];
+// $content = $_POST['content'];
 
-// 受け取ったデータを変数に入れる
-$name = $_POST['name'];
-$email = $_POST['email'];
-$content = $_POST['content'];
+// //ラジオボタン用
+// if (isset($_POST["grade"])) {
+//     $grade = $_POST["grade"];
+// }
+
+
 
 // データ登録SQL作成
 $sql = 'INSERT INTO contact(id, name, email, content, created_at) VALUES(NULL, :name, :email, :content, sysdate())';

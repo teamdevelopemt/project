@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="SMP_STYLE">
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
@@ -18,7 +18,7 @@
     <p class="header_text">以下のフォームに必要な項目を入力のうえ「送信」ボタンを押してください。<br>ご登録いただいたメールアドレスにご連絡をさせていただきます。</p>
 
     <!-- FORM start -->
-    <form method="post" action="/regist/Reg2">
+    <form method="post" action="confirm.php">
       <div class="smp_tmpl">
         <dl class="cf">
           <dt class="title">
@@ -26,7 +26,7 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f005316778" value="" maxlength="32">
+            <input class="input " type="text" name="name" value="" maxlength="32">
             <br>
             <span class="msg"></span>
           </dd>
@@ -37,7 +37,7 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f012234715" value="" maxlength="32">
+            <input class="input " type="text" name="kana" value="" maxlength="32" pattern="[\u30A1-\u30F6]*">
             <br>
             <span class="msg"></span>
           </dd>
@@ -48,7 +48,7 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f012234716" value="" maxlength="32">
+            <input class="input " type="text" name="child_name" value="" maxlength="32">
             <br>
             <span class="msg"></span>
           </dd>
@@ -59,7 +59,7 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f005316780" value="" maxlength="32">
+            <input class="input " type="text" name="child_kana" value="" maxlength="32" pattern="[\u30A1-\u30F6]*">
             <br>
             <span class="msg"></span>
           </dd>
@@ -70,22 +70,21 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f005316782" value="" maxlength="32">
+            <input class="input " type="text" name="organization" value="" maxlength="32">
             <br>
             <span class="sample">学校、団体に属されていない方は、所属無しとご記入ください。 </span><br>
             <span class="msg"></span>
           </dd>
         </dl>
 
-        <!-- ラジオボタン、なぜか複数選択できてしまう -->
         <dl class="cf">
           <dt class="title">
             お子様の学年 <span class="need">＊</span>
           </dt>
           <dd class="data ">
-            <input type="radio" name="first" value="01">高１
-            <input type="radio" name="second" value="02">高２
-            <input type="radio" name="third" value="03">高３
+            <input type="radio" name="grade" value="01">高１
+            <input type="radio" name="grade" value="02">高２
+            <input type="radio" name="grade" value="03">高３
 
             <span class="msg"></span>
           </dd>
@@ -95,11 +94,11 @@
             当HPアクセスのきっかけ <span class="need">＊</span>
           </dt>
           <dd class="data ">
-            <input type="checkbox" name="first" value="01">検索サイト
-            <input type="checkbox" name="second" value="02">ご紹介
-            <input type="checkbox" name="third" value="03">twitter
-            <input type="checkbox" name="third" value="03">Facebook
-            <input type="checkbox" name="third" value="03">その他
+            <input type="checkbox" name="[reason[]]" value="01">検索サイト
+            <input type="checkbox" name="[reason[]]" value="02">ご紹介
+            <input type="checkbox" name="[reason[]]" value="03">twitter
+            <input type="checkbox" name="[reason[]]" value="04">Facebook
+            <input type="checkbox" name="[reason[]]" value="05">その他
 
             <span class="msg"></span>
           </dd>
@@ -111,9 +110,9 @@
           </dt>
           <dd class="data ">
 
-            <input class="input " type="text" name="f005316783" value="" maxlength="129"><br>
+            <input class="input " type="email" name="email" value="" maxlength="129"><br>
             （確認用）<br>
-            <input class="input " type="text" name="f005316783:cf" value="" maxlength="129"><br>
+            <input class="input " type="email" name="email_cf" value="" maxlength="129"><br>
 
             <span class="sample">PCのメールアドレスを推奨しております。</span><br>
             <span class="msg"></span>
@@ -124,7 +123,7 @@
             携帯電話番号 <span class="need">＊</span>
           </dt>
           <dd class="data phone">
-            <input class="input " type="text" name="f005316784:a" value="" maxlength="6">
+            <input class="input " type="text" name="phone" value="" maxlength="6">
             <span class="msg"></span>
           </dd>
         </dl>
@@ -133,9 +132,9 @@
             お問い合わせ内容 <span class="need">＊</span>
           </dt>
           <dd class="data ">
-            <input type="checkbox" name="first" value="01">面談希望
-            <input type="checkbox" name="second" value="02">体験希望
-            <input type="checkbox" name="third" value="03">その他
+            <input type="checkbox" name="contact[]" value="01">面談希望
+            <input type="checkbox" name="contact[]" value="02">体験希望
+            <input type="checkbox" name="contact[]" value="03">その他
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -148,9 +147,9 @@
           <dd class="data ">
             <input type="date">
             <br><br>
-            <input type="checkbox" name="first" value="01">午前
-            <input type="checkbox" name="second" value="02">午後
-            <input type="checkbox" name="third" value="03">夕方以降
+            <input type="checkbox" name="date01[]" value="01">午前
+            <input type="checkbox" name="date01[]" value="02">午後
+            <input type="checkbox" name="date01[]" value="03">夕方以降
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -163,9 +162,9 @@
           <dd class="data ">
             <input type="date">
             <br><br>
-            <input type="checkbox" name="first" value="01">午前
-            <input type="checkbox" name="second" value="02">午後
-            <input type="checkbox" name="third" value="03">夕方以降
+            <input type="checkbox" name="date02[]" value="01">午前
+            <input type="checkbox" name="date02[]" value="02">午後
+            <input type="checkbox" name="date02[]" value="03">夕方以降
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -176,18 +175,7 @@
             お問合せ詳細
           </dt>
           <dd class="data ">
-            <textarea class="" name="f012234632" rows="4" wrap="soft"></textarea><br>
-            <span class="msg"></span>
-          </dd>
-        </dl>
-        <dl class="cf">
-          <dt class="title">
-            氏名 <span class="need">＊</span>
-          </dt>
-          <dd class="data ">
-
-            <input class="input " type="text" name="f005316778" value="" maxlength="32">
-            <br>
+            <textarea class="" name="content" rows="4" wrap="soft"></textarea><br>
             <span class="msg"></span>
           </dd>
         </dl>
