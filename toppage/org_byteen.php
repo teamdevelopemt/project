@@ -29,18 +29,6 @@
       background-size: cover;
     }
 
-    #coverTop1 {
-      font-size: 20px;
-    }
-
-    #coverTop2 {
-      font-size: 20px;
-    }
-
-
-
-
-
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -61,28 +49,28 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">dare式について<p>About</p><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="#">作品紹介<p>Products</p></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Mentors</a>
+          <a class="nav-link" href="#">指導方法<p>Mentors</p></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="../contactform/contact.php">お問い合わせ<p>Contact</p></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active mt-3">
           <a class="nav-link" href="#">Twitter</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active mt-3">
           <a class="nav-link" href="#">Facebook</a>
         </li>
-        <!-- </ul>
+      </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="キーワード" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
-      </form> -->
+      </form>
     </div>
   </nav>
 
@@ -90,10 +78,9 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="coverTop jumbotron">
-      <div class="container text-black">
-        <h3 class="display-5 mt-5 pt-5" id="coverTop1">10代の自分をデザインする</h3>
-        <h2 class="display-3">dare式</h2>
-        <h3 class="display-5 mt-4" id="coverTop2">〜自己実現型プログラミングスクール〜</h3>
+      <div class="container text-gray">
+        <h3 class="display-5 text-center mt-5 pt-5 pb-5">ほんやくプログラミングスクール</h3>
+        <h2 class="display-3 text-center pt-5 pb-5 mb-5">dare式</h2>
       </div>
     </div>
 
@@ -105,86 +92,91 @@
       </div>
     </section>
 
+    <!-- PRODUCT -->
+    <div class="container">
+      <!-- Example row of columns -->
+      <h2 class="text-center">PRODUCT</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="" alt="" class="img-thumbnail">
+          <p>2020.05.13 入学 14日目</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="" alt="" class="img-thumbnail">
+          <p>2020.05.20 入学 21日目</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <img src="" alt="" class="img-thumbnail">
+          <p>2020.06.04 入学 35日目</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+
     <!-- ABOUT -->
     <div class="container">
       <!-- ABOUT Title -->
-      <h2 class="pt-5 text-center">About</h2>
+      <h2 class="pt-5 text-center">ABOUT</h2>
       <!-- row of columns -->
       <div class="row text-center">
-        <div class="col-md-4">
-          <img src="about1.jpg" alt="" class="img-thumbnail">
+        <div class="col-md-3">
+          <img src="" alt="" class="img-thumbnail">
           <p>A</p>
         </div>
-        <div class="col-md-4">
-          <img src="about2.jpg" alt="" class="img-thumbnail">
+        <div class="col-md-3">
+          <img src="" alt="" class="img-thumbnail">
           <p>B</p>
         </div>
-        <div class="col-md-4">
-          <img src="about3.jpg" alt="" class="img-thumbnail">
+        <div class="col-md-3">
+          <img src="" alt="" class="img-thumbnail">
           <p>C</p>
         </div>
-        <div class="text-center">
-          <h3 class="pt-5">教育をデザインする</h3>
-          <div>
-            <p class="pt-2">_by Teens(バイティーンズ)は</p>
-            <p>中高生を対象としたエンジニアリングスクールです。</p>
-            <p>「G's ACADEMY FUKUOKA」に通う現役生が、PCの環境設定からプログラミング、ゲーム作成やHPのUXデザインまで、学習の機会を提供いたします。</p>
-            <p>正解のない人生を自由にデザインし、自信たっぷりの10代を過ごせるようにサポートします。</p>
-          </div>
+        <div class="col-md-3">
+          <img src="" alt="" class="img-thumbnail">
+          <p>D</p>
         </div>
-
-        <!-- PRODUCT -->
-        <div class="container">
-          <!-- Example row of columns -->
-          <h2 class="text-center">PRODUCT</h2>
-          <div class="row text-center">
-            <div class="col-md-4">
-              <img src="" alt="" class="img-thumbnail">
-              <p>2020.05.13 入学 14日目</p>
-              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-              <img src="" alt="" class="img-thumbnail">
-              <p>2020.05.20 入学 21日目</p>
-              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-              <img src="" alt="" class="img-thumbnail">
-              <p>2020.06.04 入学 35日目</p>
-              <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            </div>
-          </div>
+      </div>
+      <div class="text-center">
+        <h3 class="pt-5">教育をデザインする</h3>
+        <div>
+          <p class="pt-2">_by Teens(バイティーンズ)は</p>
+          <p>中高生を対象としたエンジニアリングスクールです。</p>
+          <p>「G's ACADEMY FUKUOKA」に通う現役生が、PCの環境設定からプログラミング、ゲーム作成やHPのUXデザインまで、学習の機会を提供いたします。</p>
+          <p>正解のない人生を自由にデザインし、自信たっぷりの10代を過ごせるようにサポートします。</p>
         </div>
+      </div>
 
-        <!-- Mentors -->
-        <div class="container pt-3">
-          <!-- row of columns -->
-          <h2 class="text-center">Mentors</h2>
-          <div class="row text-center">
-            <div class="col-md-4">
-              <img src="mentor_s.jpg" alt="mentor1" class="img-thumbnail">
-              <p>G's ACADEMY FUKUOKA</p>
-              <p>LABコース3期</p>
-              <p>中村 空海</p>
-            </div>
-            <div class="col-md-4">
-              <img src="" alt="mdntor2" class="img-thumbnail">
-              <p>G's ACADEMY FUKUOKA</p>
-              <p>LABコース3期</p>
-              <p>久保 一誠</p>
-            </div>
-            <div class="col-md-4">
-              <img src="mentor_y.jpg" alt="mentor3" class="img-thumbnail">
-              <p>G's ACADEMY FUKUOKA</p>
-              <p>LABコース3期</p>
-              <p>内藤 洋介</p>
-            </div>
-            <div class="col text-center mt-5">
-              <p><a class="btn btn-primary btn-lg" href="#" role="button">More &raquo;</a></p>
-            </div>
+      <!-- Mentors -->
+      <div class="container pt-3">
+        <!-- row of columns -->
+        <h2 class="text-center">Mentors</h2>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="mentor_s.jpg" alt="mentor1" class="img-thumbnail">
+            <p>G's ACADEMY FUKUOKA</p>
+            <p>LABコース3期</p>
+            <p>中村 空海</p>
+          </div>
+          <div class="col-md-4">
+            <img src="" alt="mdntor2" class="img-thumbnail">
+            <p>G's ACADEMY FUKUOKA</p>
+            <p>LABコース3期</p>
+            <p>久保 一誠</p>
+          </div>
+          <div class="col-md-4">
+            <img src="mentor_y.jpg" alt="mentor3" class="img-thumbnail">
+            <p>G's ACADEMY FUKUOKA</p>
+            <p>LABコース3期</p>
+            <p>内藤 洋介</p>
+          </div>
+          <div class="col text-center mt-5">
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">More &raquo;</a></p>
           </div>
         </div>
       </div>
+    </div>
 
   </main>
 
