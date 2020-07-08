@@ -127,7 +127,7 @@
             <!-- phone number -->
             <div class="col-md-12 mb-3">
               <label for="phonenum">携帯電話番号</label>
-              <input class="form-control" id="phoneNum" type="text" name="phone" value="" maxlength="6" placeholder="090-XXXX-XXXX">
+              <input class="form-control" id="phoneNum" type="text" name="phone" value="" maxlength="12" placeholder="090-XXXX-XXXX">
             </div>
             <!-- contact details -->
             <div class="col-md-12 mb-3">
