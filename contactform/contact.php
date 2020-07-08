@@ -167,7 +167,7 @@
             <div class="col-md-12 mb-3">
               <label for="detailpost">お問い合わせ詳細</label>
               <div>
-                <textarea class="" name="content" rows="5" wrap="soft"></textarea><br>
+                <textarea class="" name="content" rows="5" cols="53" wrap="soft"></textarea><br>
                 <span class="msg"></span>
               </div>
 
