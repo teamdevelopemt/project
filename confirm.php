@@ -17,23 +17,44 @@
     $_SESSION['organization'] = $_POST['organization'];
     // $grade = $_POST['grade'];
     //未
-    $_SESSION['reason'] = $_POST['reason'];
+    // $_SESSION['reason'] = $_POST['reason'];
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['email_cf'] = $_POST['email_cf'];
     $_SESSION['phone'] = $_POST['phone'];
     //未
-    $_SESSION['contact'] = $_POST['contact'];
+    // $_SESSION['contact'] = $_POST['contact'];
     //未
     $_SESSION['date01'] = $_POST['date01'];
     //未
     $_SESSION['date02'] = $_POST['date02'];
     $_SESSION['content'] = $_POST['content'];
+    $_SESSION['token'] = $_POST['token'];
 
     //ラジオボタン用
     if (isset($_POST["grade"])) {
-        $grade = $_POST["grade"];
+        $_SESSION['grade'] = $_POST["grade"];
     }
 
+    //チェックボックス用
+    if (isset($_POST['reason']) && is_array($_POST['reason'])) {
+        $_SESSION['reason'] = implode("、", $_POST["reason"]);
+    }
+    // var_dump($_SESSION['reason']);
+
+    if (isset($_POST['contact']) && is_array($_POST['contact'])) {
+        $_SESSION['contact'] = implode("、", $_POST["contact"]);
+    }
+
+    if (isset($_POST['time01']) && is_array($_POST['time01'])) {
+        $_SESSION['time01'] = implode("、", $_POST["time01"]);
+    }
+
+    if (isset($_POST['time02']) && is_array($_POST['time02'])) {
+        $_SESSION['time02'] = implode("、", $_POST["time02"]);
+    }
+
+
+    // var_dump($_SESSION['reason']);
 
     // if (empty($_POST['address'])) {
     //     $_SESSION['address'] = "記入無し";
@@ -103,7 +124,22 @@
                             <tr>
                                 <td>[お子様の学年]:</td>
                                 <td>
-                                    <?php echo $_SESSION['grade'] ?>
+                                    <input type="radio" name="grade" value="01" <?php if ($_SESSION['grade'] == '01') {
+                                                                                    echo 'readonly checked';
+                                                                                } else {
+                                                                                    echo 'disabled';
+                                                                                } ?>>高１
+                                    <input type="radio" name="grade" value="02" <?php if ($_SESSION['grade'] == '02') {
+                                                                                    echo 'readonly checked';
+                                                                                } else {
+                                                                                    echo 'disabled';
+                                                                                } ?>>高２
+                                    <input type="radio" name="grade" value="03" <?php if ($_SESSION['grade'] == '03') {
+                                                                                    echo 'readonly checked';
+                                                                                } else {
+                                                                                    echo 'disabled';
+                                                                                } ?>>高３
+
                                 </td>
                             </tr>
                             <tr>
@@ -115,13 +151,19 @@
                             <tr>
                                 <td>[メールアドレス]:</td>
                                 <td>
+                                    <?php echo $_SESSION['email'] ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>[メールアドレス(確認)]:</td>
+                                <td>
                                     <?php echo $_SESSION['email_cf'] ?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>[携帯電話番号]:</td>
                                 <td>
-                                    <?php echo $_SESSION['email_cf'] ?>
+                                    <?php echo $_SESSION['phone'] ?>
                                 </td>
                             </tr>
                             <tr>
@@ -133,13 +175,15 @@
                             <tr>
                                 <td>[無料面談希望日時]:</td>
                                 <td>
-                                    <?php echo nl2br($_SESSION['date01']); ?>
+                                    <?php echo nl2br($_SESSION['date01']); ?><br>
+                                    <?php echo nl2br($_SESSION['time01']); ?>
                                 </td>
                             </tr>
                             <tr>
                                 <td>[無料体験希望日時]:</td>
                                 <td>
-                                    <?php echo nl2br($_SESSION['date02']); ?>
+                                    <?php echo nl2br($_SESSION['date02']); ?><br>
+                                    <?php echo nl2br($_SESSION['time02']); ?>
                                 </td>
                             </tr>
                             <tr>

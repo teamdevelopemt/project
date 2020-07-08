@@ -94,11 +94,11 @@
             当HPアクセスのきっかけ <span class="need">＊</span>
           </dt>
           <dd class="data ">
-            <input type="checkbox" name="[reason[]]" value="01">検索サイト
-            <input type="checkbox" name="[reason[]]" value="02">ご紹介
-            <input type="checkbox" name="[reason[]]" value="03">twitter
-            <input type="checkbox" name="[reason[]]" value="04">Facebook
-            <input type="checkbox" name="[reason[]]" value="05">その他
+            <input type="checkbox" name="reason[]" value="検索サイト">検索サイト
+            <input type="checkbox" name="reason[]" value="ご紹介">ご紹介
+            <input type="checkbox" name="reason[]" value="twitter">twitter
+            <input type="checkbox" name="reason[]" value="Facebook">Facebook
+            <input type="checkbox" name="reason[]" value="その他">その他
 
             <span class="msg"></span>
           </dd>
@@ -113,8 +113,6 @@
             <input class="input " type="email" name="email" value="" maxlength="129"><br>
             （確認用）<br>
             <input class="input " type="email" name="email_cf" value="" maxlength="129"><br>
-
-            <span class="sample">PCのメールアドレスを推奨しております。</span><br>
             <span class="msg"></span>
           </dd>
         </dl>
@@ -132,9 +130,9 @@
             お問い合わせ内容 <span class="need">＊</span>
           </dt>
           <dd class="data ">
-            <input type="checkbox" name="contact[]" value="01">面談希望
-            <input type="checkbox" name="contact[]" value="02">体験希望
-            <input type="checkbox" name="contact[]" value="03">その他
+            <input type="checkbox" name="contact[]" value="面談希望">面談希望
+            <input type="checkbox" name="contact[]" value="体験希望">体験希望
+            <input type="checkbox" name="contact[]" value="その他">その他
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -145,11 +143,11 @@
             無料面談希望日時
           </dt>
           <dd class="data ">
-            <input type="date">
+            <input type="date" name="date01">
             <br><br>
-            <input type="checkbox" name="date01[]" value="01">午前
-            <input type="checkbox" name="date01[]" value="02">午後
-            <input type="checkbox" name="date01[]" value="03">夕方以降
+            <input type="checkbox" name="time01[]" value="午前">午前
+            <input type="checkbox" name="time01[]" value="午後">午後
+            <input type="checkbox" name="time01[]" value="夕方以降">夕方以降
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -160,11 +158,11 @@
             無料体験希望日時
           </dt>
           <dd class="data ">
-            <input type="date">
+            <input type="date" name="date02">
             <br><br>
-            <input type="checkbox" name="date02[]" value="01">午前
-            <input type="checkbox" name="date02[]" value="02">午後
-            <input type="checkbox" name="date02[]" value="03">夕方以降
+            <input type="checkbox" name="time02[]" value="午前">午前
+            <input type="checkbox" name="time02[]" value="午後">午後
+            <input type="checkbox" name="time02[]" value="夕方以降">夕方以降
             <br>
             <span class="sample">（複数選択可能です。） </span><br>
             <span class="msg"></span>
@@ -180,11 +178,7 @@
           </dd>
         </dl>
       </div>
-      <input type="hidden" name="detect" value="判定">
-      <!-- HIDDEN START -->
-      <input type="hidden" name="SMPFORM" value="lgke-obsjt-3c793296d9a768ffa8c895846bd64e39">
-      <input type="hidden" name="mode" value="0">
-      <!-- HIDDEN END -->
+      <input type="hidden" id="token" name="token" value="1234567" />
       <input class="submit" type="submit" name="submit" value="送信">
       <!-- FORM end -->
 </body>
