@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- ホスト: localhost:8889
+-- 生成日時: 2020 年 7 月 08 日 13:17
+-- サーバのバージョン： 5.7.26
+-- PHP のバージョン: 7.2.21
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- データベース: `dareshiki`
+--
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `kana` varchar(255) NOT NULL,
+  `child_name` varchar(255) NOT NULL,
+  `child_kana` varchar(255) NOT NULL,
+  `organization` varchar(255) NOT NULL,
+  `reason` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `email_cf` varchar(255) DEFAULT NULL,
+  `phone` int(11) DEFAULT NULL,
+  `contact` varchar(255) DEFAULT NULL,
+  `date01` date DEFAULT NULL,
+  `date02` date DEFAULT NULL,
+  `content` varchar(1000) DEFAULT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- テーブルのデータのダンプ `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `kana`, `child_name`, `child_kana`, `organization`, `reason`, `email`, `email_cf`, `phone`, `contact`, `date01`, `date02`, `content`, `created_at`) VALUES
+(1, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaa', '2020-07-05 14:16:59'),
+(2, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaa', '2020-07-05 15:03:47'),
+(3, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aa', '2020-07-05 15:08:14'),
+(4, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaa', '2020-07-05 15:24:06'),
+(5, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaa', '2020-07-05 15:25:05'),
+(6, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaaaa', '2020-07-05 15:34:50'),
+(7, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaaaaa', '2020-07-05 15:36:59'),
+(8, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaaaaaaaaa', '2020-07-05 15:39:37'),
+(9, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaaaaaa', '2020-07-05 15:45:52'),
+(10, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'oo', '2020-07-05 15:53:11'),
+(11, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'ooooo', '2020-07-05 15:58:40'),
+(12, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'ooooooooo', '2020-07-05 15:59:24'),
+(13, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'aaaaaaaaaaaa', '2020-07-05 16:43:02'),
+(14, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', 'っっっd', '2020-07-06 18:49:09'),
+(15, '中村空海', '', '', '', '', NULL, 'soramikuu72@gmail.com', '', 0, '', '0000-00-00', '0000-00-00', '5555', '2020-07-06 19:02:16'),
+(16, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2020-07-07 22:57:37'),
+(17, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-07 23:00:59'),
+(18, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-07 23:17:05'),
+(19, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:27:40'),
+(20, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:31:45'),
+(21, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:32:19'),
+(22, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:33:27'),
+(23, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:33:41'),
+(24, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-07', '2020-07-08', 'へい！', '2020-07-08 09:33:59'),
+(25, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '01、02', '2020-07-08', '2020-07-09', 'ああ', '2020-07-08 20:43:09'),
+(26, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-08', '2020-07-09', 'ああ', '2020-07-08 20:53:00'),
+(27, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '面談希望、体験希望', '2020-07-08', '2020-07-09', 'ああ', '2020-07-08 20:54:10'),
+(28, '中村空海', 'ソラ', '中村空海', 'ソラ', 'Personal', '検索サイト、ご紹介', 'soramikuu72@gmail.com', 'soramikuu72@gmail.com', 356931, '体験希望、その他', '2020-07-09', '2020-07-09', 'あああ', '2020-07-08 20:58:08');
+
+--
+-- ダンプしたテーブルのインデックス
+--
+
+--
+-- テーブルのインデックス `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- ダンプしたテーブルのAUTO_INCREMENT
+--
+
+--
+-- テーブルのAUTO_INCREMENT `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;

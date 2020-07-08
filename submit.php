@@ -110,7 +110,7 @@ if ($_SESSION['token']  === NULL) {
         mb_send_mail($mailto, $subject, $content, $mailfrom);
 ?>
         <script>
-            window.location = "thanks.php";
+            window.location = "thankspage/thanks.php";
         </script>
 <?php
     } else {
