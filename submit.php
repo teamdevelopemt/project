@@ -51,7 +51,7 @@ $stmt->bindValue(':organization', $_SESSION['organization'], PDO::PARAM_STR);
 $stmt->bindValue(':reason', $_SESSION['reason'], PDO::PARAM_STR);
 $stmt->bindValue(':email', $_SESSION['email'], PDO::PARAM_STR);
 $stmt->bindValue(':email_cf', $_SESSION['email_cf'], PDO::PARAM_STR);
-$stmt->bindValue(':phone', $_SESSION['phone'], PDO::PARAM_INT);
+$stmt->bindValue(':phone', $_SESSION['phone'], PDO::PARAM_STR);
 $stmt->bindValue(':contact', $_SESSION['contact'], PDO::PARAM_STR);
 $stmt->bindValue(':date01', $_SESSION['date01'], PDO::PARAM_STR);
 $stmt->bindValue(':date02', $_SESSION['date02'], PDO::PARAM_STR);
@@ -76,6 +76,8 @@ $request_datetime = date("Y年m月d日 H時i分s秒");
 
 
 $mailto = $_SESSION['email'];
+// var_dump($_SESSION['email']);
+// exit();
 $to = "soramikuu72@gmail.com";
 $mailfrom = "soramikuu72@gmail.com";
 $subject = "お問い合わせ、ありがとうございます。";
