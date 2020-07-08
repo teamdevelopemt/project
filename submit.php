@@ -57,6 +57,8 @@ $stmt->bindValue(':date01', $_SESSION['date01'], PDO::PARAM_STR);
 $stmt->bindValue(':date02', $_SESSION['date02'], PDO::PARAM_STR);
 $stmt->bindValue(':content', $_SESSION['content'], PDO::PARAM_STR);
 
+// var_dump(":phone");
+// exit();
 
 $status = $stmt->execute();
 
