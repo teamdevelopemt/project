@@ -61,16 +61,16 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="#products">Products</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Mentors</a>
+          <a class="nav-link" href="#mentors">Mentors</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="../contactform/contact.php">Contact</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#">Twitter</a>
@@ -108,7 +108,7 @@
     <!-- ABOUT -->
     <div class="container">
       <!-- ABOUT Title -->
-      <h2 class="pt-5 text-center">About</h2>
+      <h2 class="pt-5 text-center"><a id="about">About</a></h2>
       <!-- row of columns -->
       <div class="row text-center">
         <div class="col-md-4">
@@ -136,7 +136,7 @@
         <!-- PRODUCT -->
         <div class="container">
           <!-- Example row of columns -->
-          <h2 class="text-center">PRODUCT</h2>
+          <h2 class="text-center"><a id="products">PRODUCT</a></h2>
           <div class="row text-center">
             <div class="col-md-4">
               <img src="" alt="" class="img-thumbnail">
@@ -159,7 +159,7 @@
         <!-- Mentors -->
         <div class="container pt-3">
           <!-- row of columns -->
-          <h2 class="text-center">Mentors</h2>
+          <h2 class="text-center"><a id="mentors">Mentors</a></h2>
           <div class="row text-center">
             <div class="col-md-4">
               <img src="mentor_s.jpg" alt="mentor1" class="img-thumbnail">
