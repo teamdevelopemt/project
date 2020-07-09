@@ -109,7 +109,7 @@ mb_internal_encoding("UTF-8");
 //mail 送信
 // var_dump($_SESSION['token']);
 // exit();
-if ($_SESSION['token']  === NULL) {
+if ($_SESSION['token']  === 1234567) {
     if (mb_send_mail($to, $subject2, $content2, $mailfrom)) {
         mb_send_mail($mailto, $subject, $content, $mailfrom);
 ?>
